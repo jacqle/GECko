@@ -1,3 +1,6 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
 html {
     width: auto;
     height: 100%;
@@ -193,7 +196,37 @@ fieldset {
 }
 
 
-.logo_header {
+
+
+
+.header_title{
+    position: relative;
+    width: 183px;
+    height: 100px;
+    outline: 1px solid rebeccapurple;
+}
+
+.header_title .title_block{
+    outline: 1px solid blue;
+    
+    position: absolute;
+    
+    right:0;
+    top:50%;
+    transform: translateY(-50%);
+}
+.header_title h1{
+    color: white;
+    font-family: 'Kaushan Script', cursive;
+    font-size: xxx-large;
+}
+
+.header_title .logo_header {
+    outline: 1px solid green;
+    position: absolute;
     height: 80px;
     width: 80px;
+    left:0;
+    top:50%;
+    transform: translateY(-50%);
 }
