@@ -17,13 +17,9 @@ body {
 
 .container {
     position: relative;
-    margin-top: 80px;
     margin-left: auto;
     margin-right: auto;
     width: 700px;
-    height: auto;
-    background: url(http://jotform.us/images/big-back.png) repeat-x rgb(241, 241, 241);
-    color: black !important;
     font-family: 'Verdana';
     font-size: 18px;
     padding-top: 20px;
@@ -96,6 +92,7 @@ body {
     -moz-box-shadow: 0 1px 1px #82aee8 inset;
     -webkit-box-shadow: 0 1px 1px #82aee8 inset;
     box-shadow: 0 1px 1px #82aee8 inset;
+    resize: none;
 }
 
 #text-box:focus {
@@ -203,11 +200,11 @@ fieldset {
     position: relative;
     width: 183px;
     height: 100px;
-    outline: 1px solid rebeccapurple;
+    /* outline: 1px solid rebeccapurple; */
 }
 
 .header_title .title_block{
-    outline: 1px solid blue;
+    /* outline: 1px solid blue; */
     
     position: absolute;
     
@@ -222,7 +219,7 @@ fieldset {
 }
 
 .header_title .logo_header {
-    outline: 1px solid green;
+    /* outline: 1px solid green; */
     position: absolute;
     height: 80px;
     width: 80px;
