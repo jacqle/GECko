@@ -27,7 +27,7 @@ body {
 .container {
     outline: 1px solid red;
     position: relative;
-    font-family: 'Verdana';
+    font-family: 'Open Sans', sans-serif;
     font-size: 30px;
     padding-top: 20px;
     padding-bottom: 25px;
@@ -41,7 +41,7 @@ body {
     width: 50%;
 }
 
-.container-center {
+.container-right {
     float: right;
     width: 50%;
 }
@@ -59,6 +59,20 @@ footer {
     min-height: 600px;
     outline: 1px solid green;
 }
+
+.button {
+    background-color: whitesmoke;
+    border: none;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 50%;
+}  
 
 #submit:hover {
     -moz-transition-property: background;
