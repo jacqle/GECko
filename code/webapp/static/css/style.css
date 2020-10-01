@@ -7,30 +7,57 @@ html {
 }
 
 body {
-    height: auto;
-    background: linear-gradient(to bottom, rgb(41 41 41) 0%, rgb(19 74 16) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3885ec', endColorstr='#0059ce', GradientType=0);
+    height: 100vh;
+    margin: 0;
+    background-color: black;
+    /* background: linear-gradient(to bottom, rgb(41 41 41) 0%, rgb(19 74 16) 100%); */
+    /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3885ec', endColorstr='#0059ce', GradientType=0); */
     /* IE6-9 */
     background-attachment: fixed;
     text-align: center;
 }
 
+.containers-area {
+    outline: 1px solid purple;
+    width: 1150px ;
+    margin: auto;
+    /* display: flex; */
+}
+
 .container {
+    outline: 1px solid red;
     position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    width: 700px;
     font-family: 'Verdana';
-    font-size: 18px;
+    font-size: 30px;
     padding-top: 20px;
     padding-bottom: 25px;
-    -moz-box-shadow: 0px 5px 10px 0px #333, 0px -3px 10px 0px #333;
-    -webkit-box-shadow: 0px 5px 10px 0px #333, 0px -3px 10px 0px #333;
-    box-shadow: 0px 5px 10px 0px #333, 0px -3px 10px 0px #333;
-
-    -moz-border-radius: .5em;
     -webkit-border-radius: .5em;
     border-radius: .5em;
+    width: 200px
+}
+
+.container-left {
+    float: left;
+    width: 50%;
+}
+
+.container-center {
+    float: right;
+    width: 50%;
+}
+
+footer {
+    /* position: absolute;
+    bottom: 0;
+    left: 0; */
+    width: 100%;
+    height: 100px;
+    background-color:#F7C201;
+}
+
+.main-container {
+    min-height: 600px;
+    outline: 1px solid green;
 }
 
 #submit:hover {
@@ -81,10 +108,10 @@ body {
     padding: 6px;
     margin-top: -5px;
     margin-bottom: -15px;
-    width: 650px;
-    height: 100px;
-    font-family: 'Merriweather Sans', sans-serif;
-    font-size: 14px;
+    width: 500px;
+    height: 400px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
     border: 1px solid #82aee8;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -200,6 +227,7 @@ fieldset {
     position: relative;
     width: 183px;
     height: 100px;
+    margin-left: 8px;
     /* outline: 1px solid rebeccapurple; */
 }
 
