@@ -211,7 +211,7 @@ header {
 
 
 .text-box {
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
     font-family: 'Open Sans', sans-serif;
     font-size: 30px;
 }
@@ -226,7 +226,7 @@ header {
     min-height: 600px;
     /* width: 800px; */
     margin: auto;
-    outline: 1px solid green;
+    /* outline: 1px solid green; */
     display:inline-flex;
 }
 
@@ -242,39 +242,28 @@ header {
 }
 
 fieldset.inputs{
-    padding: 0;
     border: 0;
 }
 
 
 #text-box-input, #text-box-output {
-    background:blueviolet;
-    /* padding: 6px; */
-    /* margin-top: -5px; */
-    /* margin-bottom: -15px; */
-    /* width: 500px; */
+    padding: 20px;
+    background: none;
+    border: 1px solid rgb(255 255 255 / 15%);
+    border-radius: 25px;
     height: 400px;
     font-family: 'Open Sans', sans-serif;
     color: whitesmoke;
     font-size: 30px;
-    border: 0px solid #82aee8;
-    /* -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px; */
     -moz-box-shadow: 0 1px 1px #82aee8 inset;
     -webkit-box-shadow: 0 1px 1px #82aee8 inset;
     box-shadow: 0 0px 0px #82aee8 inset;
     resize: none;
-    padding: 0;
+    outline: none;
 }
 
-#text-box:focus {
-    background-color:black;
-    border-color: #82aee8;
-    outline: none;
-    -moz-box-shadow: 0 0 0 0px #82aee8 inset;
-    -webkit-box-shadow: 0 0 0 0px #82aee8 inset;
-    box-shadow: 0 0 0 0px #82aee8 inset;
+#text-box-input:focus{
+    box-shadow: inset 0 0 1px 1px rgb(227, 255, 234);
 }
 
 .arrow-button {
@@ -282,7 +271,6 @@ fieldset.inputs{
     top:50px;
     font-family: "Verdana", sans-serif;
     text-transform: uppercase;
-    outline: 0;
     background: transparent;
     height: 40px;
     width: 40px;
@@ -294,7 +282,7 @@ fieldset.inputs{
     transition: all 0.3 ease;
     cursor: pointer;
     border-radius: 100%;
-    outline: 1px solid yellow;
+    /* outline: 1px solid yellow; */
 }
 
 .arrow-button:hover,.arrow-button:active,.arrow-button:focus {
