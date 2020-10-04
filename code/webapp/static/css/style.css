@@ -179,6 +179,7 @@ nav a:nth-child(3):hover ~ #indicator
 
 header {
     background-color:black;
+    outline: 1px solid purple;
 }
 
 .header_title {
@@ -230,13 +231,13 @@ header {
 
 .containers-area {
     /* outline: 1px solid purple; */
-    width: 1150px ;
+    /* width: 1150px ; */
     margin: auto;
     /* display: flex; */
 }
 
 .container {
-    /* outline: 1px solid red; */
+    outline: 1px solid red;
     position: relative;
     font-family: 'Open Sans', sans-serif;
     font-size: 30px;
@@ -249,19 +250,19 @@ header {
 
 .container-left {
     float: left;
-    width: 535px;
+    /* width: 535px; */
     height: 420px;
 }
 
 .container-right {
     float: left;
-    width: 500px;
+    /* width: 500px; */
     height: 420px;
 }
 
 .container-center {
     float: left;
-    width: 40px;
+    /* width: 40px; */
     height: 420px;
 }
 
@@ -285,7 +286,7 @@ header {
 }
 
 #text-box {
-    background:black;
+    background:blueviolet;
     padding: 6px;
     margin-top: -5px;
     margin-bottom: -15px;
@@ -349,9 +350,9 @@ header {
     /* ie */
 }
 
-.form button {
-    position: relative;
-    top: -10px;
+.arrow-button {
+    position: absolute;
+    top:50px;
     font-family: "Verdana", sans-serif;
     text-transform: uppercase;
     outline: 0;
@@ -366,9 +367,10 @@ header {
     transition: all 0.3 ease;
     cursor: pointer;
     border-radius: 100%;
+    outline: 1px solid yellow;
 }
 
-.form button:hover,.form button:active,.form button:focus {
+.arrow-button:hover,.arrow-button:active,.arrow-button:focus {
     color: #7096E0;
     background: transparent;
 }
@@ -417,13 +419,15 @@ h1.team-h1 {
     padding-bottom: 5em;
     margin-top: 3em;
     position: relative;
+    display: inline-flex;
+    outline: 1px dashed black;
   }
   
   .team-member {
-    width: 16%;
-    float: left;
+    width: 200px;
     text-align: center;
-    margin-right: 5%;
+    outline: 1px dashed purple;
+    display: inline-block;
   }
   
   .team-member:last-child {margin-right: 0;}
