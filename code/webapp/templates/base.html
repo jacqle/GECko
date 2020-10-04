@@ -28,45 +28,123 @@
         <meta name="theme-color" content="#ffffff">
         <!--favicon-->
     </head>
+
     <body>
-        <header>
+        <!--header-->
+        <header id="myHeader">
             <div class="header_title">
+                <img id= "myLogo" src="../static/img/GECko_logo_recatangular.jpg" alt="GECko Logo" class="logo_header"/>
+            </div>
+
+            <nav>
+                <a href="#">CORRECT</a>
+                <a href="#">TEAM</a>
+                <a href="#">ABOUT</a>
+                <div id="indicator"></div>
+            </nav>
+
+            <!-- <div class="header_title">
                 <img src="../static/img/GECko_logo.png" alt="logo of GECko" class="logo_header"/>
                 <div class="title_block">
                     <h1>ECko</h1>
-                </div>
-            </div>
+            </div> --> 
+
         </header>
+        <!--header-->
+
+        <!--javascript-->
+        <script>
+         window.onscroll = function() {scrollFunction()};
+            
+            var header = document.getElementById("myHeader");
+            var sticky = header.offsetTop;
+            var logo = document.getElementById("myLogo")
+
+            function scrollFunction() {
+              if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+                header.style.height = "50px";
+                logo.style.height = "26px"
+                logo.style.width = "34px"
+                
+              } else {
+                header.classList.remove("sticky");
+                header.style.height = "150px";
+                logo.style.height = "130px"
+                logo.style.width = "170px"
+              }
+            }
+        </script>
+        <!--javascript-->
+
+        <!--corrector-->
         <div class="main-container">
             <div class="containers-area">
+
                 <div class="container-left container">
                     <fieldset class="inputs">
                         <textarea type="text" name="post" id="text-box" placeholder="I'm hungry for mistakes..."></textarea>
                     </fieldset>
-                    <!-- <fieldset class="actions">
-                        <button id="submit">Post</button>
-                    </fieldset> -->
-                <div id="post-container">
+                    <div id="post-container">
+                    </div>
                 </div>
+                
+                <div class="container-center container">
+                    <div class="login-page">
+                        <div class="form">
+                            <button>➤</button>
+                        </div>
+                    </div>    
                 </div>
-
-                <!-- <button class="button button5">></button> -->
-
+                
                 <div class="container-right container">
                     <fieldset class="inputs">
                         <textarea disabled type="text" name="post" id="text-box" placeholder="Your text digested..."></textarea>
                     </fieldset>
-                    <!-- <fieldset class="actions">
-                        <button id="submit">Post</button>
-                    </fieldset> -->
-                <div id="post-container">
-                </div>
+                    <div id="post-container">
+                    </div>
                 </div>
             </div>
         </div>
-    <!--Footer-->
-    <footer>
-        <h1></h1>
-    </footer>
+
+        <!--team-->
+        <div class="main-container-w">
+            
+        <section class="cf team-container">
+            <h1 class="team-h1">Our Team</h1>
+        
+            <!-- member1-->  
+            <div class="team-member">
+                <img class="team-photo" src="../static/img/GECko_logo.png">
+                <h3>Eduardo<br>Calò</h3>
+                <span>blabla</span>
+                <a class="email" href="educa95@gmail.com"><span >email</span></a>
+            </div>
+
+            <!-- member2-->
+            <div class="team-member">
+            <img class="team-photo" src="../static/img/GECko_logo.png">
+                <h3>Léo<br>Jacqmin</h3>
+                <span>blabla</span>
+                <a class="email" href="mailto:email@something.com"><span >email</span></a>
+            </div>
+
+            <!-- member3-->
+            <div class="team-member">
+            <img class="team-photo" src="../static/img/GECko_logo.png">
+                <h3>Thibo<br>Rosemplatt</h3>
+                <span>blabla</span>
+                <a class="email" href="mailto:email@something.com"><span >email</span></a>
+            </div> 
+        </div>
+
+        <!--about-->
+        <div class="main-container">
+            <div class="container-about container">
+                <h1>About</h1>
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at vehicula nibh, non fermentum mi. Nam finibus, neque vitae egestas consequat, orci magna placerat ipsum, sit amet volutpat libero justo sit amet ex. Proin sapien nisl, aliquam quis lorem nec, vestibulum luctus augue. Aliquam consectetur nulla at quam eleifend tincidunt. Nulla lorem leo, posuere a risus in, dignissim ultrices tortor. Pellentesque sollicitudin felis nulla, quis mollis libero venenatis non. Aenean suscipit imperdiet mi, non tempor quam tincidunt nec. Sed eget mi tortor.</p>
+            </div>
+        </div>
+
     </body>
 </html>
