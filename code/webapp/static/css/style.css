@@ -223,11 +223,12 @@ header {
 }
 
 .textboxes-container {
-    min-height: 600px;
+    /* min-height: 600px; */
     /* width: 800px; */
     margin: auto;
-    /* outline: 1px solid green; */
+    outline: 1px solid green;
     display:inline-flex;
+    line-height: 430px;
 }
 
 /* .textboxes-container > .textbox{
@@ -267,8 +268,8 @@ fieldset.inputs{
 }
 
 .arrow-button {
-    position: absolute;
-    top:50px;
+    /* position: absolute; */
+    /* top:50px; */
     font-family: "Verdana", sans-serif;
     text-transform: uppercase;
     background: transparent;
@@ -282,6 +283,7 @@ fieldset.inputs{
     transition: all 0.3 ease;
     cursor: pointer;
     border-radius: 100%;
+    vertical-align: middle;
     /* outline: 1px solid yellow; */
 }
 
