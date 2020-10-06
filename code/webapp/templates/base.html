@@ -33,9 +33,12 @@
 <body>
     <!--header-->
     <header id="myHeader">
-        <div class="header_title">
-            <img id="myLogo" src="../static/img/GECko_logo_recatangular.jpg" alt="GECko Logo" class="logo_header" />
+        <div class="logo_container">
+            <img src="../static/img/GECko_logo.png" alt="Logo of GECko" width="130" height="130">
+            <p id="tagline">Gobbles up your mistakes</p>
         </div>
+        
+
 
         <nav>
             <a href="#">CORRECT</a>
@@ -44,40 +47,27 @@
             <div id="indicator"></div>
         </nav>
 
-        <!-- <div class="header_title">
-                <img src="../static/img/GECko_logo.png" alt="logo of GECko" class="logo_header"/>
-                <div class="title_block">
-                    <h1>ECko</h1>
-            </div> -->
+        
 
     </header>
 
     <!--corrector-->
     <div class="textboxes-container">
-        <div class="text-box input-text-box">
-            <fieldset class="inputs">
-                <textarea type="text" name="post" id="text-box-input" placeholder="I'm hungry for mistakes..."></textarea>
-            </fieldset>
+        <div contenteditable="true" class="text-box" id="textarea-input">  
         </div>
         <div class="arrow-button">
             ➤
         </div>
-        <div class="text-box output-text-box">
-            <fieldset class="inputs">
-                <textarea disabled type="text" name="post" id="text-box-output" placeholder="Your text digested..."></textarea>
-            </fieldset>
+        <div class="text-box" id="textarea-output">
         </div>
     </div>
 
     
-    
-    </div>
-
-    <!--team-->
-    <div class="team-container">
+    <footer>
+        <div class="team-container">
             <!-- member1-->
             <div class="team-member">
-                <img class="team-photo" src="../static/img/GECko_logo.png">
+                <div class="team_member_picture"></div>
                 <h3>Eduardo<br>Calò</h3>
                 <span>blabla</span>
                 <a class="email" href="educa95@gmail.com"><span>email</span></a>
@@ -85,31 +75,32 @@
 
             <!-- member2-->
             <div class="team-member">
-                <img class="team-photo" src="../static/img/GECko_logo.png">
-                <h3>Léo<br>Jacqmin</h3>
+                <div class="team_member_picture"></div>
+                <h3>Thibo<br>Rosemplatt</h3>
                 <span>blabla</span>
-                <a class="email" href="mailto:email@something.com"><span>email</span></a>
+                <a class="email" href="educa95@gmail.com"><span>email</span></a>
             </div>
 
             <!-- member3-->
             <div class="team-member">
-                <img class="team-photo" src="../static/img/GECko_logo.png">
-                <h3>Thibo<br>Rosemplatt</h3>
+                <div class="team_member_picture"></div>
+                <h3>Leo<br>Jacqmin</h3>
                 <span>blabla</span>
-                <a class="email" href="mailto:email@something.com"><span>email</span></a>
+                <a class="email" href="educa95@gmail.com"><span>email</span></a>
             </div>
-    </div>
+        </div>
 
-    <!--about-->
-    <div class="container-about">
-        <h1>About</h1>
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at vehicula nibh, non fermentum mi.
-            Nam finibus, neque vitae egestas consequat, orci magna placerat ipsum, sit amet volutpat libero justo sit
-            amet ex. Proin sapien nisl, aliquam quis lorem nec, vestibulum luctus augue. Aliquam consectetur nulla at
-            quam eleifend tincidunt. Nulla lorem leo, posuere a risus in, dignissim ultrices tortor. Pellentesque
-            sollicitudin felis nulla, quis mollis libero venenatis non. Aenean suscipit imperdiet mi, non tempor quam
-            tincidunt nec. Sed eget mi tortor.</p>
-    </div>
+        <!--about-->
+        <div class="container-about">
+            <h1>About</h1>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at vehicula nibh, non fermentum mi.
+                Nam finibus, neque vitae egestas consequat, orci magna placerat ipsum, sit amet volutpat libero justo sit
+                amet ex. Proin sapien nisl, aliquam quis lorem nec, vestibulum luctus augue. Aliquam consectetur nulla at
+                quam eleifend tincidunt. Nulla lorem leo, posuere a risus in, dignissim ultrices tortor. Pellentesque
+                sollicitudin felis nulla, quis mollis libero venenatis non. Aenean suscipit imperdiet mi, non tempor quam
+                tincidunt nec. Sed eget mi tortor.</p>
+        </div>
+    </footer>
 
     <!-- <script type="text/javascript" src="../static/js/sticky.js"></script> -->
 </body>
