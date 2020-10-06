@@ -1,6 +1,5 @@
 /* fonts */
-@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap');
 /* Built in tags */
 
 html {
@@ -100,10 +99,6 @@ nav a:hover:before, nav a:hover:after
     transform: scale(1);
 }
 
-nav a:nth-child(1):hover ~ #indicator
-{
-}
-
 nav a:nth-child(2):hover ~ #indicator
 {
     left: 44%;
@@ -119,43 +114,21 @@ nav a:nth-child(3):hover ~ #indicator
 /* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
 
 header {
+    text-align: center;
     /* background-color:#012615; */
     /* outline: 1px solid purple; */
+    height: 150px;
 }
 
 .logo_container {
     position: relative;
     /* width: 150px; */
-    height: 150px;
     margin-left: 8px;
     /* outline: 1px solid rebeccapurple; */
-    display: flex;
-}
-
-#tagline{
-    color: white;
-    font-size: x-large;
-}
-
-.header_title .title_block {
-    /* outline: 1px solid blue; */
-    
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%)
+    width: fit-content;
 }
 
 
-.header_title .logo_header {
-    /* outline: 1px solid green; */
-    position: absolute;
-    height: 130px;
-    width: 130px;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-}
 
 .sticky {
     position: fixed;
