@@ -300,16 +300,12 @@ footer {
     color: wheat;
 }
 
-.team-member h3{
-    /* color: white; */
-}
-
 .team-member-picture{
     width: 100px;
     height: 100px;
     border-radius: 100%;
     background-color: saddlebrown;
-    margin: auto;z
+    margin: auto;
 }
 
 .container-about {
