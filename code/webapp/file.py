@@ -1,4 +1,4 @@
-from flask import Flask, redirect, url_for, render_template
+from flask import Flask, redirect, url_for, render_template, request
 
 app = Flask(__name__) 
 
@@ -8,7 +8,8 @@ def home():
 
 @app.route("/predict")
 def predict():
-    return "this is a dummy predict message"
+    text = request.args.get('jsdata')
+    return text*2
 
 
 if __name__ == "__main__":

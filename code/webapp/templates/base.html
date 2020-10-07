@@ -102,7 +102,8 @@
 
     <script>
     $("#arrow-button").click(function(){
-        var text = $("#textarea-input").val();
+        var text = $("#textarea-input").text();
+        console.log(text)
 
         $.ajax({
             url: "/predict",
