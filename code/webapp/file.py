@@ -6,6 +6,10 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
+@app.route("/predict")
+def predict():
+    return "this is a dummy predict message"
+
 
 if __name__ == "__main__":
     app.run(debug = True)
