@@ -12,16 +12,18 @@ body {
     margin: 0;
     /* background-color: #000D06; */
     /* background: radial-gradient(ellipse at center,#126819 0,#0a3a16 100%); */
-    /* background: linear-gradient(135deg, #305EE6 0%,#47F5BC 100%); */
 
     background: #0F2027;  /* fallback for old browsers */
-    background: linear-gradient(to top, #003b1e, #11351d, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    background: linear-gradient(135deg, #2E1114 0%, #501B1D 100% );
+    /* background: linear-gradient(135deg, #305EE6 0%,#47F5BC 100%); */
+    /* background: linear-gradient(to top, #003b1e, #11351d, #0F2027); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     background-repeat: no-repeat;
     background-attachment: fixed;
     text-align: center;
+
 }
+
 
 
 
@@ -47,7 +49,7 @@ nav a
     width: 33.333%;
     display: table-cell;
     text-align: center;
-    color: whitesmoke;
+    color: #efe8dc;
     text-decoration: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
@@ -88,14 +90,14 @@ nav a:after
     bottom: 0;
     width: 30px;
     height: 3px;
-    background-color: rgb(0, 87, 46);
+    background-color: #efe8dc;
     border-radius: 5px;
     transition: 0.2s ease left;
 }
 
 nav a:hover
 {
-    color: #fff;
+    color: ##efe8dc;
 }
 
 nav a:hover:before, nav a:hover:after
@@ -121,15 +123,16 @@ header {
     text-align: center;
     /* background-color:#012615; */
     /* outline: 1px solid purple; */
-    height: 150px;
+    height: 100px;
+    margin-top: 20px;
 }
 
 .logo-container {
     position: relative;
     /* width: 150px; */
-    margin-left: 8px;
     /* outline: 1px solid rebeccapurple; */
     width: fit-content;
+    
 }
 
 
@@ -155,7 +158,7 @@ header {
     font-size: 30px;
     width: 500px;
     min-height: 300px;
-    background-color: #201c29
+    background-color: #efe8dc
 }
 
 #textarea-input, #textarea-output {
@@ -164,11 +167,12 @@ header {
     border: 1px solid rgb(255 255 255 / 15%);
     border-radius: 25px;
     font-family: 'Open Sans', sans-serif;
-    color: whitesmoke;
+    color: black;
     font-size: 25px;
     resize: none;
     outline: none;
     box-shadow: 0 0 3px #4b4b4b;
+    height: 150px;
 }
 
 #text-box-input:focus{
@@ -178,7 +182,7 @@ header {
 .container-about {
     float: center;
     width: 1150px;
-    color: white;
+    color: #efe8dc;
 }
 
 .textboxes-container {
@@ -205,9 +209,8 @@ fieldset.inputs{
     background: transparent;
     height: 40px;
     width: 40px;
-    border: 0;
-    padding: 10px;
-    color: #FFFFFF;
+    padding: 140px 10px 140px 10px;
+    color: #efe8dc;
     font-size: 50px;
     -webkit-transition: all 0.3 ease;
     transition: all 0.3 ease;
@@ -218,24 +221,24 @@ fieldset.inputs{
 }
 
 .arrow-button:hover,.arrow-button:active,.arrow-button:focus {
-    color: #7096E0;
+    /* color: #7096E0; */
+    color: #B4A696;
     background: transparent;
     transition: background 0.4s ease-in-out;
 }
 
-/* footer */
-footer {
+
+/* blocco-team */
+.team {
     padding: 80px 0;
     width: 100%;
-    /* height: 500px; */
-    background-color:#000D06;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: flex-start;
+    height: 100vh;
+    background-color:#efe8dc;
     font-family: 'Open Sans', sans-serif;
 }
 
+
+/* Team */
 
 .team-container {
     max-width: 1000px;
@@ -248,19 +251,55 @@ footer {
  
 .team-member{
     margin: 0 15px;
-    color: wheat;
+    color: #501B1D;
+    width: 300px;
+    flex-wrap: wrap;
 }
 
-.team-member h3{
-    /* color: white; */
+.team-title {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    color: #501B1D;
+    margin-bottom: 50px;
 }
 
 .team-member-picture{
     width: 100px;
     height: 100px;
     border-radius: 100%;
-    background-color: saddlebrown;
     margin: auto;
+    /* clip-path: circle(50px at center); */
+    border: #501B1D 3px solid;  
+    background-size: 100px 100px;
+}
+
+.team-member-picture#eduardo-picture{
+    background-image: url("../img/edu.jpeg");
+}
+
+.team-member-picture#leo-picture{
+    background-image: url("../img/leo.jpeg");
+}
+
+.team-member-picture#thibo-picture{
+    background-image: url("../img/thi.jpeg");
+}
+
+/* footer */
+
+footer {
+    padding: 80px 0;
+    width: 100%;
+    /* height: 500px; */
+    background-color:transparent;
+    color: #efe8dc;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .container-about {
@@ -268,5 +307,5 @@ footer {
     text-align: justify;
     /* outline: salmon 1px solid; */
     max-width: 600px;
-    border-left: 1px solid white;
+    border-left: 1px solid #ADADAD;
 }
