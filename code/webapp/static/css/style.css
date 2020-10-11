@@ -312,3 +312,20 @@ footer {
     max-width: 600px;
     border-left: 1px solid #ADADAD;
 }
+
+
+
+
+/* Deltas */
+
+.delta-insert{
+    border-bottom: green 1px dashed;
+}
+
+.delta-replace{
+    border-bottom: blue 1px dashed;
+}
+
+.delta-delete{
+    border-bottom: red 1px dashed;
+}
