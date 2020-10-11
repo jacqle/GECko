@@ -99,25 +99,8 @@
 
     <!-- <script type="text/javascript" src="../static/js/sticky.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../static/js/predict.js"></script>
 
-    <script>
-    $("#arrow-button").click(function(){
-        var text = $("#textarea-input").text();
-        console.log(text)
-
-        $.ajax({
-            url: "/predict",
-            type: "get",
-            data: {jsdata: text},
-            success: function(response) {
-                $("#textarea-output").html(response);
-            },
-            error: function(xhr) {
-                //Do Something to handle error
-            }
-        });
-    });
-    </script>
 </body>
 
 </html>
