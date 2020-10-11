@@ -13,8 +13,9 @@ body {
     /* background-color: #000D06; */
     /* background: radial-gradient(ellipse at center,#126819 0,#0a3a16 100%); */
 
-    background: #0F2027;  /* fallback for old browsers */
-    background: linear-gradient(135deg, #2E1114 0%, #501B1D 100% );
+    background: #0F2027;
+    /* fallback for old browsers */
+    background: linear-gradient(135deg, #2E1114 0%, #501B1D 100%);
     /* background: linear-gradient(135deg, #305EE6 0%,#47F5BC 100%); */
     /* background: linear-gradient(to top, #003b1e, #11351d, #0F2027); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
@@ -31,8 +32,7 @@ body {
 /* :::::::::: NAV BAR :::::::::::::::::::::::::::::::::::::::::::::::::::::: */
 /* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
 
-nav
-{
+nav {
     position: absolute;
     top: 10%;
     right: 0;
@@ -43,8 +43,7 @@ nav
     transform: translateY(-50%);
 }
 
-nav a
-{
+nav a {
     position: relative;
     width: 33.333%;
     display: table-cell;
@@ -57,8 +56,8 @@ nav a
     transition: 0.2s ease color;
 }
 
-nav a:before, nav a:after
-{
+nav a:before,
+nav a:after {
     content: "";
     position: absolute;
     border-radius: 50%;
@@ -66,16 +65,14 @@ nav a:before, nav a:after
     transition: 0.2s ease transform;
 }
 
-nav a:before
-{
+nav a:before {
     top: 0;
     left: 10px;
     width: 6px;
     height: 6px;
 }
 
-nav a:after
-{
+nav a:after {
     top: 5px;
     left: 18px;
     width: 4px;
@@ -83,8 +80,7 @@ nav a:after
 }
 
 
-#indicator
-{
+#indicator {
     position: absolute;
     left: 5%;
     bottom: 0;
@@ -95,23 +91,20 @@ nav a:after
     transition: 0.2s ease left;
 }
 
-nav a:hover
-{
-    color: ##efe8dc;
+nav a:hover {
+    color: #efe8dc;
 }
 
-nav a:hover:before, nav a:hover:after
-{
+nav a:hover:before,
+nav a:hover:after {
     transform: scale(1);
 }
 
-nav a:nth-child(2):hover ~ #indicator
-{
+nav a:nth-child(2):hover~#indicator {
     left: 44%;
 }
 
-nav a:nth-child(3):hover ~ #indicator
-{
+nav a:nth-child(3):hover~#indicator {
     left: 72%;
 }
 
@@ -120,11 +113,12 @@ nav a:nth-child(3):hover ~ #indicator
 /* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
 
 header {
-    text-align: center;
+    text-align: left;
     /* background-color:#012615; */
     /* outline: 1px solid purple; */
     height: 100px;
     margin-top: 20px;
+    margin-left: 20px;
 }
 
 .logo-container {
@@ -132,18 +126,22 @@ header {
     /* width: 150px; */
     /* outline: 1px solid rebeccapurple; */
     width: fit-content;
-    
+
 }
 
 
+div:empty:before {
+    content: attr(data-placeholder);
+    color: gray
+}
 
 .sticky {
     position: fixed;
     top: 0;
     width: 100%
 }
-  
-.sticky + .content {
+
+.sticky+.content {
     padding-top: 102px;
 }
 
@@ -151,6 +149,10 @@ header {
 /* ::::::::::: MAIN :::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
 /* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
 
+.transparent-container {
+    height: 80vh;
+    background-color: transparent;
+}
 
 .text-box {
     /* outline: 1px solid red; */
@@ -158,10 +160,11 @@ header {
     font-size: 30px;
     width: 500px;
     min-height: 300px;
-    background-color: #efe8dc
+    background-color: white
 }
 
-#textarea-input, #textarea-output {
+#textarea-input,
+#textarea-output {
     text-align: left;
     padding: 20px;
     border: 1px solid rgb(255 255 255 / 15%);
@@ -175,7 +178,7 @@ header {
     height: 150px;
 }
 
-#text-box-input:focus{
+#text-box-input:focus {
     box-shadow: inset 0 0 1px 1px rgb(227, 255, 234);
 }
 
@@ -191,15 +194,13 @@ header {
     padding: 80px 0;
     margin: auto;
     /* outline: 1px solid green; */
-    display:inline-flex;
+    display: inline-flex;
     /* line-height: 430px; */
 }
 
-fieldset.inputs{
+fieldset.inputs {
     border: 0;
 }
-
-
 
 .arrow-button {
     /* position: absolute; */
@@ -207,20 +208,22 @@ fieldset.inputs{
     font-family: "Verdana", sans-serif;
     text-transform: uppercase;
     background: transparent;
-    height: 40px;
+    height: 0px;
     width: 40px;
-    padding: 140px 10px 140px 10px;
+    margin-top: 3.5cm;
+    padding: 0px 10px 0px 10px;
     color: #efe8dc;
     font-size: 50px;
     -webkit-transition: all 0.3 ease;
     transition: all 0.3 ease;
     cursor: pointer;
     border-radius: 100%;
-    vertical-align: middle;
     /* outline: 1px solid yellow; */
 }
 
-.arrow-button:hover,.arrow-button:active,.arrow-button:focus {
+.arrow-button:hover,
+.arrow-button:active,
+.arrow-button:focus {
     /* color: #7096E0; */
     color: #B4A696;
     background: transparent;
@@ -232,8 +235,8 @@ fieldset.inputs{
 .team {
     padding: 80px 0;
     width: 100%;
-    height: 100vh;
-    background-color:#efe8dc;
+    height: 75vh;
+    background-color: #efe8dc;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -247,9 +250,9 @@ fieldset.inputs{
     position: relative;
     display: inline-flex;
     /* outline: 1px dashed pink; */
-} 
- 
-.team-member{
+}
+
+.team-member {
     margin: 0 15px;
     color: #501B1D;
     width: 300px;
@@ -265,25 +268,25 @@ fieldset.inputs{
     margin-bottom: 50px;
 }
 
-.team-member-picture{
+.team-member-picture {
     width: 100px;
     height: 100px;
     border-radius: 100%;
     margin: auto;
     /* clip-path: circle(50px at center); */
-    border: #501B1D 3px solid;  
+    border: #501B1D 3px solid;
     background-size: 100px 100px;
 }
 
-.team-member-picture#eduardo-picture{
+.team-member-picture#eduardo-picture {
     background-image: url("../img/edu.jpeg");
 }
 
-.team-member-picture#leo-picture{
+.team-member-picture#leo-picture {
     background-image: url("../img/leo.jpeg");
 }
 
-.team-member-picture#thibo-picture{
+.team-member-picture#thibo-picture {
     background-image: url("../img/thi.jpeg");
 }
 
@@ -293,7 +296,7 @@ footer {
     padding: 80px 0;
     width: 100%;
     /* height: 500px; */
-    background-color:transparent;
+    background-color: transparent;
     color: #efe8dc;
     display: flex;
     flex-wrap: wrap;
