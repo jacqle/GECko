@@ -150,7 +150,7 @@ div:empty:before {
 /* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
 
 .transparent-container {
-    height: 80vh;
+    min-height: min(80vh,700px);
     background-color: transparent;
 }
 
@@ -175,7 +175,7 @@ div:empty:before {
     resize: none;
     outline: none;
     box-shadow: 0 0 3px #4b4b4b;
-    height: 150px;
+    min-height: 150px;
 }
 
 #text-box-input:focus {
@@ -210,7 +210,7 @@ fieldset.inputs {
     background: transparent;
     height: 0px;
     width: 40px;
-    margin-top: 3.5cm;
+    margin-top: 1.5cm;
     padding: 0px 10px 0px 10px;
     color: #efe8dc;
     font-size: 50px;
