@@ -1,20 +1,45 @@
+from flask import Flask, redirect, url_for, render_template, request
+import difflib
 from flask import Flask, redirect, url_for, render_template
 from gector.model import load_model
 from gector.predict import predict_for_string
 # model dl link: https://grammarly-nlp-data-public.s3.amazonaws.com/gector/bert_0_gector.th
 
 app = Flask(__name__) 
-model = load_model(vocab_path='./gector/data/output_vocabulary/',
-                   model_paths=['/home/leo/nlp/software_project/bert_0_gector.th'])
-
-s = """It 's difficult answer at the question " what are you going to do in the future ? "
-         if the only one who has to know it is in two minds ."""
-print(predict_for_string(s, model))
-
 
 @app.route("/")
 def home():
     return render_template("index.html")
+
+@app.route("/predict")
+def predict():
+    model = load_model(vocab_path='./gector/data/output_vocabulary/',
+                   model_paths=['insert model here'])
+    text = request.args.get('jsdata')
+    corrected_text = predict_for_string(text, model)
+    return show_diff(text, corrected_text)
+
+
+def show_diff(text, n_text):
+    """
+    compares two strings
+    gives the correct css classes accordingly
+    """
+    seqm = difflib.SequenceMatcher(None, text, n_text)
+    output= []
+    for opcode, a0, a1, b0, b1 in seqm.get_opcodes():
+        if opcode == 'equal':
+            output.append(seqm.a[a0:a1])
+        elif opcode == 'insert':
+            output.append('<span class="delta-insert">' + seqm.b[b0:b1] + '</span>')
+        elif opcode == 'delete':
+            output.append('<span class="delta-delete">' + seqm.a[a0:a1] + '</span>')
+        elif opcode == 'replace':
+            output.append('<span class="delta-replace">' + seqm.b[b0:b1] + "</span>")
+        else:
+            raise RuntimeError("unexpected opcode")
+    return ''.join(output)
+
 
 if __name__ == "__main__":
     app.run(debug = True)
