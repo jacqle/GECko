@@ -130,3 +130,4 @@ dmypy.json
 
 # Others
 .DS_Store
+code/webapp/static/nn_models/xlnet_0_gector.th

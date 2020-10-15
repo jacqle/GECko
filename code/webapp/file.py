@@ -3,7 +3,6 @@ import difflib
 from flask import Flask, redirect, url_for, render_template
 from gector.model import load_model
 from gector.predict import predict_for_string
-# model dl link: https://grammarly-nlp-data-public.s3.amazonaws.com/gector/bert_0_gector.th
 
 app = Flask(__name__) 
 
@@ -14,7 +13,7 @@ def home():
 @app.route("/predict")
 def predict():
     model = load_model(vocab_path='./gector/data/output_vocabulary/',
-                   model_paths=['insert model here'])
+                   model_paths=['./static/nn_models/xlnet_0_gector.th'])
     text = request.args.get('jsdata')
     corrected_text = predict_for_string(text, model)
     return show_diff(text, corrected_text)
