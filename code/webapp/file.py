@@ -1,6 +1,5 @@
 from flask import Flask, redirect, url_for, render_template, request
 import difflib
-from flask import Flask, redirect, url_for, render_template
 from gector.model import load_model
 from gector.predict import predict_for_string
 
@@ -13,7 +12,8 @@ def home():
 @app.route("/predict")
 def predict():
     model = load_model(vocab_path='./gector/data/output_vocabulary/',
-                   model_paths=['./static/nn_models/xlnet_0_gector.th'])
+                   model_paths=['./static/nn_models/xlnet_0_gector.th'],
+                   model_name="xlnet")
     text = request.args.get('jsdata')
     corrected_text = predict_for_string(text, model)
     return show_diff(text, corrected_text)
