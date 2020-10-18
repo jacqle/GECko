@@ -4,6 +4,7 @@ from gector.model import load_model
 from gector.predict import predict_for_string
 import spacy
 from nltk.tokenize.treebank import TreebankWordDetokenizer
+import os 
 
 app = Flask(__name__)
 
@@ -16,7 +17,8 @@ def home():
 
 @app.route("/predict")
 def predict():
-    model = load_model(vocab_path='./gector/data/output_vocabulary/',
+    relative_vocab_path = os.path.relpath('./gector/data/output_vocabulary/', start = './gector') 
+    model = load_model(vocab_path= relative_vocab_path,
                    model_paths=['./static/nn_models/xlnet_0_gector.th'],
                    model_name="xlnet")
     user_input = request.args.get('jsdata')
