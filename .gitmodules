@@ -1,0 +1,6 @@
+[submodule "code/gector"]
+	path = code/gector
+	url = https://github.com/grammarly/gector.git
+[submodule "code/webapp/gector"]
+	path = code/webapp/gector
+	url = https://github.com/jacqle/gector
