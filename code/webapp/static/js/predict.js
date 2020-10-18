@@ -9,7 +9,7 @@ $("#arrow-button").click(function(){
             $("#textarea-output").html(response);
         },
         error: function(xhr) {
-            //Do Something to handle error 
+            $("#textarea-output").html("Gecko seems to be tired today..  (︶︹︶)");
         }
     });
 });
