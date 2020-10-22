@@ -321,13 +321,14 @@ footer {
 /* Deltas */
 
 .delta-insert{
-    border-bottom: green 1px dashed;
+    border-bottom: green 2px solid;
 }
 
 .delta-replace{
-    border-bottom: blue 1px dashed;
+    border-bottom: blue 2px solid ;
 }
 
 .delta-delete{
-    border-bottom: red 1px dashed;
+    border-bottom: red 2px solid;
+    display: none;
 }
