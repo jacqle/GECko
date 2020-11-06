@@ -4,3 +4,6 @@
 [submodule "code/webapp/gector"]
 	path = code/webapp/gector
 	url = https://github.com/jacqle/gector
+[submodule "code/gecko"]
+	path = code/gecko
+	url = https://github.com/psawa/gecko-app
